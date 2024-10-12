@@ -1,4 +1,5 @@
 const DEFAULT_REMINDER_INTERVAL = 30; // minutes
+let keepAliveInterval;
 
 function createAlarm(interval) {
   chrome.alarms.create("healthReminder", {
@@ -25,24 +26,37 @@ function getCountdown(callback) {
   });
 }
 
+function showNotification() {
+  chrome.notifications.create({
+    type: "basic",
+    iconUrl: "icon128.png",
+    title: "Health Reminder",
+    message: "Time to close your eyes for 20 seconds and take a sip of water!",
+    priority: 2
+  });
+}
+
+function keepAlive() {
+  if (keepAliveInterval) clearInterval(keepAliveInterval);
+  keepAliveInterval = setInterval(() => {
+    console.log("Keeping service worker alive");
+    chrome.runtime.getPlatformInfo(() => {});
+  }, 20000); // Every 20 seconds
+}
+
 chrome.runtime.onInstalled.addListener(() => {
   console.log("Extension installed");
   chrome.storage.local.get(['reminderInterval'], (result) => {
     const interval = result.reminderInterval || DEFAULT_REMINDER_INTERVAL;
     createAlarm(interval);
   });
+  keepAlive();
 });
 
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "healthReminder") {
     console.log("Alarm triggered");
-    chrome.notifications.create({
-      type: "basic",
-      iconUrl: "icon128.png",
-      title: "Health Reminder",
-      message: "Time to close your eyes for 20 seconds and take a sip of water!",
-      priority: 2
-    });
+    showNotification();
     // Recreate the alarm for the next interval
     chrome.storage.local.get(['reminderInterval'], (result) => {
       const interval = result.reminderInterval || DEFAULT_REMINDER_INTERVAL;
@@ -64,3 +78,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     return true; // Indicates that the response is sent asynchronously
   }
 });
+
+// Keep the service worker alive
+keepAlive();
+
+// Restart the keep-alive interval when the service worker wakes up
+chrome.runtime.onStartup.addListener(keepAlive);
