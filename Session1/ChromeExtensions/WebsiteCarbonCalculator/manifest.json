@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Carbon Emissions Calculator",
+  "version": "1.0",
+  "description": "Calculate carbon emissions for websites",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://api.websitecarbon.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

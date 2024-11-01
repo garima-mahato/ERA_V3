@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Reminder</title>
+  <style>
+    body {
+      width: 300px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+    h1 {
+      font-size: 24px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .countdown-container {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #countdown {
+      font-size: 28px;
+      font-weight: bold;
+      color: #3498db;
+    }
+    .input-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    input[type="number"] {
+      width: 60px;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #bdc3c7;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 14px;
+      color: white;
+      background-color: #3498db;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    #resetTimer {
+      width: 100%;
+      margin-top: 10px;
+    }
+  </style>
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <h1>Health Reminder</h1>
+  <div class="countdown-container">
+    <p>Next reminder in:</p>
+    <div id="countdown">Loading...</div>
+  </div>
+  <div class="input-group">
+    <input type="number" id="intervalInput" min="1" step="1" placeholder="Minutes">
+    <button id="setInterval">Set Interval</button>
+  </div>
+  <button id="resetTimer">Reset Timer</button>
+</body>
+</html>

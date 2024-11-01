@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Health Reminder",
+  "version": "1.0",
+  "description": "Reminds you to close your eyes and drink water at frequent intervals",
+  "permissions": ["alarms", "notifications", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

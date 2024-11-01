@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Emissions Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    
+    <h1>Website carbon results for: 
+      <div id="urlContainer" class="url-container">
+        <span id="url" class="url-text"></span>
+      </div>
+    </h1>
+    <div id="rating" class="rating"></div>
+    <p id="cleanerThan" class="cleaner-than"></p>
+    <p class="last-tested">This page was last tested on <span id="lastTested"></span></p>
+    <div class="info-box">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
+      <p id="co2" class="co2"></p>
+    </div>
+    <div class="info-box">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+      <p id="energy" class="energy"></p>
+    </div>
+    <div id="yearlyStats" class="yearly-stats"></div>
+    <button id="calculate">Test again</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
