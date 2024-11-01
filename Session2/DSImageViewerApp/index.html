@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Viewer App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>File Viewer App</h1>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h2>Select an Animal</h2>
+            <div class="radio-group">
+                <label><input type="radio" name="animal" value="cat"> Cat</label>
+                <label><input type="radio" name="animal" value="dog"> Dog</label>
+                <label><input type="radio" name="animal" value="elephant"> Elephant</label>
+            </div>
+            <img id="animalImage" src="" alt="Animal Image">
+            <button onclick="clearAnimal()" class="clear-button">Clear</button>
+        </div>
+
+        <div class="box">
+            <h2>Upload a File</h2>
+            <label for="fileInput" class="file-upload-label">Choose File</label>
+            <input type="file" id="fileInput">
+            <button onclick="uploadFile()">Upload</button>
+            <button onclick="clearFile()" class="clear-button">Clear</button>
+            <div id="fileInfo"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <span>Made with</span>
+            <div class="cursor-ai-icon"></div>
+        </div>
+    </footer>
+
+    <script>
+        const animalImages = {
+            cat: '/static/cat.jpg',
+            dog: '/static/dog.jpg',
+            elephant: '/static/elephant.jpg'
+        };
+
+        document.querySelectorAll('input[name="animal"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                const animalImage = document.getElementById('animalImage');
+                animalImage.src = animalImages[e.target.value];
+                animalImage.style.display = 'block';
+            });
+        });
+
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const fileName = e.target.files[0]?.name || 'No file chosen';
+            document.querySelector('.file-upload-label').textContent = fileName;
+        });
+
+        function clearAnimal() {
+            document.querySelectorAll('input[name="animal"]').forEach(radio => {
+                radio.checked = false;
+            });
+            const animalImage = document.getElementById('animalImage');
+            animalImage.src = '';
+            animalImage.style.display = 'none';
+        }
+
+        function clearFile() {
+            const fileInput = document.getElementById('fileInput');
+            fileInput.value = '';
+            document.querySelector('.file-upload-label').textContent = 'Choose File';
+            document.getElementById('fileInfo').innerHTML = '';
+        }
+
+        async function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (!file) {
+                alert('Please select a file');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                const result = await response.json();
+                document.getElementById('fileInfo').innerHTML = `
+                    <p><strong>File Name:</strong> ${result.filename}</p>
+                    <p><strong>File Size:</strong> ${result.size} bytes</p>
+                    <p><strong>File Type:</strong> ${result.content_type}</p>
+                `;
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while uploading the file');
+            }
+        }
+    </script>
+</body>
+</html>
