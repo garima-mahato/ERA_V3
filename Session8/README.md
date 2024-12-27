@@ -82,7 +82,7 @@ Estimated Total Size (MB): 14.61
 
 ```
 
-![](https://raw.githubusercontent.com/garima-mahato/ERA_V3/main/Session9/assets/cifar10_s8__finaltorchviz.png)
+![](https://raw.githubusercontent.com/garima-mahato/ERA_V3/main/Session8/assets/cifar10_s8__finaltorchviz.png)
 
 ---
 
