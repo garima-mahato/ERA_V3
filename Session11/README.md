@@ -1,4 +1,4 @@
-# Session11
+# Sanskrit BPE Tokenizer
 
 [Link to training script](https://github.com/garima-mahato/ERA_V3/blob/main/Session11/TokenizerTraining.ipynb)
 
