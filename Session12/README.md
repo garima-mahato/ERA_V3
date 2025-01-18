@@ -14,7 +14,7 @@ This app is made using a decoder-like model > 124 million parameters and trained
 | Number of epochs trained | 96 |
 | Training Loss | 0.0635 |
 | Model Code | [Code Link](https://github.com/garima-mahato/ERA_V3/blob/main/Session12/gpt_model.py) |
-| Training Script | [Training File](https://github.com/garima-mahato/ERA_V3/blob/main/Session12/Session12.ipynb} |
+| Training Script | [Training File](https://github.com/garima-mahato/ERA_V3/blob/main/Session12/Session12.ipynb) |
 
 
 ## Model
