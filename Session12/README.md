@@ -6,6 +6,7 @@ This app spins weird tales from the context that you give in Shakespearen style.
 
 This app is made using a decoder-like model > 124 million parameters and trained for 96 epochs with < 0.099 loss.
 
+|---|---|
 | Number of model parameters | 137,710,080 |
 | Token Size | 512 |
 | Batch size | 4 |
