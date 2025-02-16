@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  text_generator:
+    build:
+      context: ./text_generator
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+
+  smollm2_135_service:
+    build:
+      context: ./smollm2_135_service
+    ports:
+      - "8001:8001"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
