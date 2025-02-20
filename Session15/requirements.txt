@@ -1,0 +1,7 @@
+torch
+gradio
+transformers
+pytorch-lightning 
+datasets
+wandb
+lightning
