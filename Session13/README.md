@@ -1,5 +1,7 @@
 # [SmolLM2-135: Transformer-Based Causal Language Model](https://huggingface.co/spaces/garima-mahato/SmoLLM2TextGenerator)
 
+![](https://raw.githubusercontent.com/garima-mahato/ERA_V3/refs/heads/main/Session13/images/smollm2_135.JPG)
+
 SmolLM2-135 is a lightweight transformer-based causal language model designed for efficient text generation. It features rotary positional embeddings, RMS normalization, and a gated MLP block within each decoder layer. The architecture is defined by a configurable number of layers, attention heads, and hidden dimensions.
 
 ---
