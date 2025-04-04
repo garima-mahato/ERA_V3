@@ -1,7 +1,10 @@
-# ERA_V3_Session22_Qwen2_5_(3B)_GRPO
+# [ERA_V3_Session22_Qwen2_5_(3B)_GRPO](https://huggingface.co/spaces/garima-mahato/GRPO-Reasoning-Assistant)
 
 | Link to Code | [Colab](https://github.com/garima-mahato/ERA_V3/blob/main/Session22/ERA_V3_Session22_Qwen2_5_(3B)_GRPO.ipynb) |
 |---|---|
+| Link to Hf Space | [Reasoning Assistant](https://huggingface.co/spaces/garima-mahato/GRPO-Reasoning-Assistant) |
+
+![](https://raw.githubusercontent.com/garima-mahato/ERA_V3/refs/heads/main/Session22/assets/hf_space.JPG)
 
 This repository contains the implementation of GRPO (Gradient-based Reward Policy Optimization) applied to the Qwen2.5 (3B) model. In this project, GRPO is used as a fine-tuning technique to further improve the model’s performance on task-specific conversational data.
 
