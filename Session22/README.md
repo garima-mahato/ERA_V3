@@ -1,5 +1,7 @@
 # ERA_V3_Session22_Qwen2_5_(3B)_GRPO
 
+| Link to Code | [Colab](https://github.com/garima-mahato/ERA_V3/blob/main/Session22/ERA_V3_Session22_Qwen2_5_(3B)_GRPO.ipynb) |
+
 This repository contains the implementation of GRPO (Gradient-based Reward Policy Optimization) applied to the Qwen2.5 (3B) model. In this project, GRPO is used as a fine-tuning technique to further improve the model’s performance on task-specific conversational data.
 
 ## What is GRPO?
