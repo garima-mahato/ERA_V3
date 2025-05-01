@@ -216,6 +216,8 @@ python Session25/talk2mcp.py
 <!--![Demo GIF](docs/images/demo.gif)
 *(Create a GIF showing the entire process)*-->
 
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/DESJjg_ZHNE/0.jpg)](http://www.youtube.com/watch?v=DESJjg_ZHNE)
+
 
 <b> LLM Logs</b>
 
