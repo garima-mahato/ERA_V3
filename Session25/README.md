@@ -97,8 +97,9 @@ Query: "Find the ASCII values of characters in INDIA and then return sum of expo
 3. Sum the results
 4. Visualize in Paint
 
-![Example Output](docs/images/example_output.png)
-*(Add a screenshot of Paint output)*
+<b> Example Output </b>
+
+![](https://raw.githubusercontent.com/garima-mahato/ERA_V3/refs/heads/main/Session25/images/example_result.JPG)
 
 ## Installation
 
@@ -215,9 +216,6 @@ python Session25/talk2mcp.py
 <!--![Demo GIF](docs/images/demo.gif)
 *(Create a GIF showing the entire process)*-->
 
-<b> Final Output </b>
-
-![](https://raw.githubusercontent.com/garima-mahato/ERA_V3/refs/heads/main/Session25/images/example_result.JPG)
 
 <b> LLM Logs</b>
 
