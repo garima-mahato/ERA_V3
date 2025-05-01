@@ -27,9 +27,9 @@ graph LR
     MCP --> |Response| LLM
     LLM --> |Final Answer| User
 
-    style LLM fill:#f9d,stroke:#fff
-    style MCP fill:#9df,stroke:#fff
-    style MSPaint fill:#dfd,stroke:#fff
+    style LLM fill:#6e2355,stroke:#333
+    style MCP fill:#164157,stroke:#333
+    style MSPaint fill:#093809,stroke:#333
 ```
 
 ## Features
