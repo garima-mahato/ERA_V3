@@ -79,10 +79,10 @@ flowchart TD
     
     Result --> End([End])
 
-    style Start fill:#f9f,stroke:#333
-    style End fill:#f9f,stroke:#333
-    style Paint fill:#9ef,stroke:#333
-    style Calculate fill:#fe9,stroke:#333
+    style Start fill:#6e2355,stroke:#333
+    style End fill:#6e2355,stroke:#333
+    style Paint fill:#164157,stroke:#333
+    style Calculate fill:#093809,stroke:#333
 ```
 
 ## Example Use Case
